@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 16px 32px;
+  border-bottom: 1px solid rgba(0, 128, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom-color: var(--primary);
+}
+
+.navbarInner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoImage {
+  height: auto;
+  width: auto;
+  max-height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover {
+  transform: scale(1.02);
+}
+
+.button {
+  font-size: 13px;
+  padding: 12px 24px;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbarInner {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .logoImage {
+    max-height: 40px;
+  }
+
+  .button {
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logoImage {
+    max-height: 35px;
+  }
+
+  .button {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+}
